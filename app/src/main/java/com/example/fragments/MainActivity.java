@@ -31,5 +31,15 @@ public class MainActivity extends AppCompatActivity {
                 transaction.commit();
             }
         });
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment2 fragment2 = new Fragment2();
+                FragmentTransaction transaction2 = getSupportFragmentManager().beginTransaction();
+                transaction2.replace(R.id.LinearLayout, fragment2);
+                transaction2.commit();
+            }
+        });
     }
 }
